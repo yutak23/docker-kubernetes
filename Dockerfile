@@ -25,5 +25,7 @@ RUN yum install -y yum-utils; \
 #     apt-get update; \
 #     apt-get install -y nginx;
 
+ADD nginx.conf /etc/nginx/
+
 ENTRYPOINT nginx -g 'daemon off;'
 # ENTRYPOINT ["nginx", "-g", "daemon off;"]
